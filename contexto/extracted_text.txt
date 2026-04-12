@@ -1,0 +1,390 @@
+FASE 1
+, 
+2
+ y 3
+Jorge Cuenca, Adrián García, Diego Fernández y Alejandro Sánchez
+https://www.figma.com/board/MCEbQn4D6OFj6dO9FfkqGJ/Proyecto-Final?node-id=0-1&t=aPiKIArEltkcoGvg-1
+Índice
+0. IDEA
+1. FASE 1: 
+ELECCIÓN Y FORMULACIÓN ESTRATÉGICA DEL PROYECTO
+1.1 Bloque 1: 
+Idea y contexto
+1.2 Bloque 2: 
+Descripción del proceso actual
+1.3 Bloque 3: 
+Hipótesis de problema
+1.4 Bloque 4: 
+Impacto operativo
+1.5 Bloque 5: 
+Delimitación del proyecto
+1.6 Bloque 6: 
+Objetivo del sistema digital
+2. FASE 2: 
+ANÁLISIS ESTRUCTURAL DEL SISTEMA OPERATIVO
+2.1 Bloque 1: 
+Actores del sistema
+2.2 Bloque 2: 
+Flujo del proceso
+2.3 Bloque 3: 
+Dependencias entre actores
+2.4 Bloque 4: 
+Eventos del sistema
+2.5 Bloque 5: 
+Decisiones del sistema
+2.6 Bloque 6: 
+Información necesaria
+3
+. FASE 
+3
+:
+ DISEÑO CONCEPTUAL DEL SISTEMA DIGITAL
+ 
+3
+.1 Bloque 1: 
+Entidades
+ del sistema
+3
+.2 Bloque 2:
+ Estados
+ del sistem
+a
+ 
+ 
+3
+.3 Bloque 3: 
+Roles
+ del sistema
+3
+.4 Bloque 4: 
+Alertas
+ del sistem
+a
+3
+.5 Bloque 5: 
+Módulos
+ del sistema
+3
+.6 Bloque 6: 
+Arquitectura conceptual
+ del sistem
+a
+Idea:
+ 
+App de Coordinación Operativa para Alquileres Turísticos
+El concepto: Una herramienta digital 100% interna para una agencia de 25 pisos turísticos, diseñada para coordinar al equipo central con los proveedores externos (limpieza y mantenimiento).
+El problema: El caos y los retrasos que ocurren en las horas críticas entre el check-out y el check-in. Usar WhatsApp y Excel provoca pérdida de información, incidencias sin resolver a tiempo y clientes esperando en la puerta.
+La solución: Un sistema en tiempo real donde:
+Recepción marca la salida del huésped.
+Limpieza recibe la orden automática, limpia y reporta desperfectos o falta de suministros con fotos.
+Mantenimiento recibe alertas directas de esas incidencias.
+El coordinador visualiza en un panel el estado en vivo de todos los pisos ("Limpiando", "Incidencia", "Listo").
+El límite (lo que NO es): No es un Airbnb. Los turistas no usan esta app; no hay reservas, ni buscador de pisos, ni pasarelas de pago. Es pura logística interna.
+FASE 1
+: Elección y formulación estratégica:
+Bloque 1 – Idea y contexto
+Idea elegida: 
+Sistema de gestión operativa para alquileres turísticos.
+Tipo de empresa (tamaño, sector, estructura básica):
+ Agencia de gestión de alquiler vacacional de tamaño medio. Gestiona un total de 25 viviendas turísticas distribuidas en 2 ciudades. Su estructura se basa en un equipo interno de gestión y una fuerte dependencia de proveedores externos (limpieza y mantenimiento).
+Operación principal (qué hace la empresa cada día): 
+Gestionar las rotaciones de los huéspedes, coordinando los tiempos entre el check-out y el check-in para asegurar que las viviendas se limpian, se revisan las incidencias y se reponen los suministros a tiempo.
+Número aproximado de empleados: 
+6 empleados fijos internos (recepción y coordinación).
+Ámbito elegido (inventarios / abastecimiento / transporte): 
+Coordinación, abastecimiento y gestión operativa.
+Bloque 2 – 
+Descripción del proceso actual
+Paso 1:
+ Notificación de salida (Check-out) El huésped finaliza su estancia y abandona la vivienda. Informa a Recepción, quien anota manualmente en un documento de Excel compartido que el piso ha quedado vacío.
+Paso 2:
+ Asignación de limpieza El Coordinador de la agencia revisa el Excel, ve que el piso está libre y escribe un mensaje de texto por WhatsApp al encargado de la empresa de limpieza externa para darle luz verde y que envíe a alguien.
+Paso 3:
+ Limpieza y reporte manual de incidencias El personal de limpieza acude a la vivienda y comienza a trabajar. Si durante la limpieza detectan que falta stock de sábanas o hay algún desperfecto (por ejemplo, una silla rota), deben parar y llamar por teléfono al Coordinador para explicárselo.
+Paso 4: 
+Intervención de mantenimiento Tras recibir la llamada, el Coordinador tiene que localizar por teléfono al técnico de mantenimiento externo, explicarle la incidencia y enviarle a la vivienda. Esto interrumpe el flujo normal y paraliza la finalización de la limpieza hasta que se arregla el problema.
+Paso 5:
+ Cierre y autorización de Check-in Una vez solucionada la incidencia y terminada la limpieza, el equipo externo vuelve a enviar un WhatsApp al Coordinador avisando de que ya han acabado. El Coordinador avisa a Recepción, quien finalmente actualiza el Excel marcando el piso como "Listo" para el nuevo cliente.
+Bloque 3 – Hipótesis de problema
+Hipótesis:
+En esta empresa puede producirse una descoordinación en la preparación y mantenimiento de las viviendas debido a la dependencia de canales manuales (WhatsApp/llamadas) y la nula visibilidad en tiempo real del estado de las tareas, lo que provoca retrasos en las entregas de llaves (check-in) y una acumulación de incidencias operativas.
+Bloque 4 – Impacto operativo
+Consecuencias operativas:
+ Retrasos continuos en la entrega de llaves a los nuevos huéspedes (check-in) y una grave sobrecarga de trabajo manual para el equipo que debe apagar "fuegos" constantemente.
+Áreas afectadas:
+ Recepción (atención al cliente), Coordinación Operativa (equipo interno central) y la Gestión de Proveedores externos (limpieza y mantenimiento).
+Decisiones complicadas:
+ Resulta muy difícil priorizar qué vivienda debe limpiarse primero cuando hay un retraso, o decidir en tiempo real si enviar a un técnico de urgencia sin saber en qué estado exacto se encuentra el piso.
+Costes ocultos:
+ Pérdida de rentabilidad futura por malas reseñas en plataformas (clientes frustrados por esperar o encontrar desperfectos) y horas de trabajo improductivas del coordinador dedicadas exclusivamente a hacer llamadas de seguimiento.
+Bloque 5 – Delimitación del proyecto
+✅
+ Sí incluiremos:
+ 
+Una herramienta digital interna (panel web/app) para la gestión operativa. Incluirá: trazabilidad de los estados de la vivienda (sucio, limpiando, listo), reporte de 
+incidencias con fotos desde el piso, y un flujo de notificaciones/alertas directo entre recepción, coordinación y los proveedores externos (limpieza y mantenimiento).
+❌
+ NO incluiremos:
+ 
+Cualquier funcionalidad dirigida al cliente final (los turistas). Queda estrictamente fuera diseñar un portal público tipo Airbnb, la gestión o motor de reservas, pasarelas de pago, y los módulos de facturación o contabilidad financiera de la empresa.
+👤
+ Usuario principal:
+ 
+El Coordinador de operaciones interno de la agencia (que supervisará todo desde un panel central) y el personal de proveedores externos (limpieza/mantenimiento, que reportarán los estados desde sus móviles).
+🎯
+ Objetivo del sistema:
+ 
+El sistema permitirá trazar en tiempo real el estado de las tareas de limpieza y el reporte de incidencias para mejorar la coordinación con los proveedores externos y reducir los retrasos en las entregas de llaves a los clientes.
+Bloque 6 – Objetivo del sistema digital
+El sistema permitirá trazar en tiempo real el estado de limpieza y las incidencias de cada vivienda para mejorar la coordinación con los proveedores externos y evitar retrasos en los check-in.
+FASE 
+2
+: 
+A
+nálisis estructural del sistema operativo:
+Bloque 
+1
+ – 
+Actores del sistema
+Recepción.
+Función: Registra las salidas físicas de los huéspedes (check-out) y autoriza las nuevas entradas (check-in) una vez recibe la confirmación de que el piso está listo
+.
+Coordinador Operativo.
+Función: Supervisa en tiempo real el estado de las 25 viviendas, gestiona las urgencias y toma decisiones cuando hay incidencias críticas que bloquean el proceso.
+Equipo de Limpieza.
+Función: Ejecuta la preparación física de la vivienda, repone los suministros básicos y es el encargado de reportar cualquier desperfecto que encuentre al entrar.
+7
+Técnico de Mantenimiento.
+Función: Acude a las viviendas de forma reactiva para reparar roturas o problemas técnicos reportados por el equipo de limpieza.
+Huésped.
+Función: Aunque no usa el sistema digital que vamos a diseñar, es el actor que desencadena el proceso (al irse) y marca el límite de tiempo de todo el equipo (al llegar).
+Software de Reservas (Channel Manager / Airbnb).
+Función: Sistema externo que almacena las fechas y horas exactas en las que debe entrar y salir cada cliente, marcando los plazos del proceso.
+Bloque 
+2
+ – 
+Flujo del proceso
+El Huésped finaliza su estancia, deja las llaves y abandona la vivienda (Check-out).
+Recepción registra la salida manualmente en el Excel de control y marca el piso como "Vacío".
+El Coordinador Operativo revisa el Excel y envía la orden de trabajo por WhatsApp al responsable del Equipo de Limpieza.
+El Equipo de Limpieza llega a la vivienda, inicia su trabajo y hace una revisión visual del estado general.
+El Equipo de Limpieza hace recuento del inventario de suministros (amenities, toallas, sábanas) para reponer lo necesario.
+Al terminar, el personal de limpieza envía un mensaje (WhatsApp) al Coordinador confirmando que el piso está limpio e informando si ha faltado algún suministro o hay alguna anomalía.
+El Coordinador recibe el reporte, valida que todo esté en orden (o gestiona lo que falte) y da el visto bueno final.
+El Coordinador avisa a Recepción de que la vivienda ya está operativa.
+Recepción actualiza el Excel marcando el piso como "Listo" y autoriza la entrega de llaves al nuevo Huésped (Check-in).
+Bloque 
+3
+ – 
+Dependencias entre actores
+Aviso de piso vacío
+: 
+El Equipo de Limpieza depende de Recepción. Los limpiadores no pueden iniciar su ruta ni entrar al piso hasta que Recepción les confirme que el huésped anterior ha hecho el check-out real y ha devuelto las llaves.
+Reporte de incidencias y estado
+: 
+El Coordinador depende de la informaci
+ó
+n del Equipo de Limpieza. El coordinador est
+á
+ a ciegas; no sabe si falta gel, toallas o si han roto una l
+á
+mpara hasta que limpieza entra al piso y le avisa.
+Orden de reparación urgente
+: 
+El Técnico de Mantenimiento depende de las órdenes del Coordinador. El técnico solo inicia su desplazamiento cuando el coordinador le asigna una incidencia específica detectada por limpieza.
+Reparación finalizada:
+ 
+A veces, el Equipo de Limpieza depende de Mantenimiento para terminar. Si hay una avería grave (ej. fontanería en el baño), los limpiadores tienen que parar y esperar a que el técnico termine para poder fregar y dejar el piso listo.
+Vivienda 100% lista:
+ 
+Recepción depende totalmente de los equipos externos. Esta es la dependencia más crítica: el recepcionista no puede hacer el check-in y entregar las llaves al nuevo huésped hasta que no recibe luz verde de que todo ha terminado.
+Bloque 
+4
+ – 
+Eventos del sistema
+Notificación de salida: 
+Evento 1: 
+Se registra el check-out del huésped. (Cambia el estado de la vivienda de "Ocupada" a "Vacía/Sucia").
+Asignación de limpieza: 
+Evento 2: 
+Se notifica la orden de limpieza al proveedor externo. (Cambia el estado a "Limpieza asignada").
+Limpieza y reporte: 
+Evento 3: El equipo de limpieza inicia el servicio físico en el piso. (Cambia el estado a "Limpieza en curso").
+Evento 4: Aparece una incidencia (desperfecto) o una alerta de falta de stock (amenities). (Cambia el estado a "Bloqueado por incidencia").
+Intervención de mantenimiento:
+Evento 5: El técnico de mantenimiento confirma la resolución de la incidencia. (Desbloquea el proceso y el estado vuelve a "Limpieza en curso").
+Cierre y autorización:
+Evento 6: El equipo externo confirma el fin de todos los trabajos.
+Evento 7: Se marca la vivienda como "100% Lista" en el sistema. (Habilita a Recepción para hacer el nuevo check-in).
+Bloque 
+5
+ – 
+Decisiones del sistema
+Decisión
+ 1
+:
+ La vivienda se debe limpiar primero (Priorización de tareas basada en qué pisos tienen un check-in más temprano o urgente).
+Actor que la toma: 
+Coordinador Operativo.
+Decisión 2:
+ ¿Es necesario reponer inventario de suministros (gel, sábanas, papel) en la vivienda antes de que entre el siguiente cliente?
+Actor que la toma:
+ Equipo de Limpieza (al evaluar el estado) y Coordinador Operativo (al validar el envío de nuevo stock).
+Decisión
+ 3
+:
+ ¿Cómo reaccionar ante una incidencia detectada? (Si se rompe una silla, decidir si se envía al técnico de mantenimiento de urgencia o si el piso se puede alquilar así y se repara mañana).
+Actor que la toma:
+ Coordinador Operativo.
+Decisión
+ 4
+:
+ Autorización de la entrada y entrega de las llaves al nuevo huésped que está esperando
+Actor que la toma:
+ Recepción.
+Decisión
+ 5
+:
+ Decidir si el piso está realmente preparado para el cliente basándose en el reporte que acaba de enviar el equipo de limpieza).
+Actor que la toma: 
+Coordinador Operativo.
+Decisión
+ 6
+:
+ Si una vivienda no va a estar lista a la hora del check-in por un problema grave ¿se reubica al huésped en otro apartamento que esté libre o se le avisa para retrasar su llegada? (Gestión de crisis de disponibilidad).
+Actor que la toma:
+ Coordinador Operativo (busca la alternativa) y Recepción (ejecuta la reubicación y se lo comunica al cliente).
+Bloque 
+6
+ – 
+Información necesaria
+Estado en tiempo real de las 25 viviendas:
+ 
+Ej: "Ocupada", "Pendiente de limpieza", "En proceso", "Bloqueada por avería", "Lista para Check-in".
+Es la base de todo el sistema.
+Horarios críticos (Tiempos límite): 
+A qué hora sale el huésped actual y, sobre todo, a qué hora entra el siguiente. 
+Esto permite al coordinador priorizar qué piso limpiar primero si hay retrasos.
+Registro detallado de incidencias:
+Qué está roto o falta en cada piso, nivel de gravedad (bloqueante o no), y a ser posible, con una fotografía adjunta por el equipo de limpieza.
+Nivel de stock y suministros (Abastecimiento):
+ 
+Información sobre si faltan amenities (gel, champú), sábanas o toallas en una vivienda específica para que se repongan antes de que entre el nuevo cliente.
+Asignación y estado de los proveedores externos: 
+Saber qué equipo de limpieza está asignado a qué vivienda y si el técnico de mantenimiento está de camino o ya ha terminado su reparación.
+FASE 3: D
+iseño funcional y arquitectura del sistema
+Bloque 1
+ – 
+Entidades del Sistema
+Para que el software funcione, necesitamos definir qué "objetos" o conceptos va a manejar la base de datos. Estas son las piezas clave de nuestra aplicación:
+Viviendas:
+ Es el registro de los 25 apartamentos que gestionamos. Incluye la dirección, códigos de acceso, capacidad y, lo más importante, su estado actual (sucia, en limpieza, lista).
+Tareas:
+ Son las acciones operativas del día a día, principalmente limpiezas y reparaciones. Cada tarea tiene un responsable asignado, una fecha y un estado (pendiente, en curso o finalizada).
+Incidencias:
+ El registro de cualquier desperfecto detectado, como una silla rota o un grifo que gotea. Incluye fotos para que el coordinador vea el problema sin ir al piso y el nivel de urgencia.
+Suministros (Inventario):
+ Un catálogo de los artículos básicos (sábanas, toallas, amenities como gel o champú). Controla el stock disponible y genera alertas cuando nos estamos quedando sin material.
+Usuarios:
+ Todas las personas que usan la app, desde el personal de limpieza externo hasta el coordinador interno, cada uno con sus permisos específicos.
+Turnos (Rotaciones):
+ La información que viene del sistema de reservas con las horas exactas de check-out y check-in, que son las que marcan el ritmo de trabajo.
+Proveedores:
+ Registro de las empresas externas de limpieza y mantenimiento con las que trabajamos, incluyendo sus datos de contacto.
+Bloque 
+2
+ – Estados del sistema
+El núcleo de la coordinación es saber exactamente en qué punto está cada cosa. Hemos definido tres flujos de estados:
+Estados de la Vivienda
+Ocupada: El huésped sigue dentro.
+Pendiente de limpieza: El huésped se ha ido, el piso está vacío pero sucio.
+En proceso: El equipo de limpieza ya está trabajando dentro.
+Bloqueada / Con incidencia: Hay un problema grave que impide alquilarla o terminar de limpiar.
+Lista: Limpia
+, revisada y preparada para el check-in.
+Estados de las Tareas de Limpieza
+Pendiente: 
+Creada,
+ pero nadie ha empezado.
+En curso: El equipo ya ha marcado el inicio en la app.
+Pausada: Han tenido que parar por una avería y esperan a mantenimiento.
+Completada: Limpieza
+ terminada y reporte enviado.
+Estados de las 
+Incidencias
+Reportada
+: 
+Creada
+ en el sistema
+.
+Asignada
+: 
+Coordinador avisa al técnico de mantenimiento.
+En reparación
+: 
+El técnico está arreglándolo.
+Resuelta
+: El técnico
+ 
+termina
+ y el coordinador cierra la incidencia.
+Bloque 
+3 – 
+Roles del Sistema (Perfiles de Usuario)
+No todos los usuarios verán lo mismo. Hemos definido cuatro perfiles según lo que necesitan hacer en su jornada:
+Coordinador Operativo (Perfil Administrador):
+ 
+Qué hace: Supervisa en tiempo real todo el flujo de trabajo, asigna prioridades, gestiona las incidencias graves y da el visto bueno final a las viviendas para el nuevo cliente.
+Con qué interactúa: Tiene acceso completo. Interactúa con las Viviendas, Tareas, Incidencias, Suministros, Turnos y Usuarios.
+Personal de Recepción:
+ 
+Qué hace: Activa el inicio del proceso marcando la salida física del huésped (check-out) y consulta qué pisos están ya terminados para entregar las llaves a los nuevos (check-in).
+Con qué interactúa: Interactúa principalmente con los Turnos y el estado general de las Viviendas.
+Equipo de Limpieza (Perfil Operario):
+ 
+Qué hace: Recibe alertas de averías, acude a los apartamentos correspondientes y actualiza la app cuando termina de reparar el problema.
+Con qué interactúa: Interactúa casi exclusivamente con las Incidencias (para ver los detalles y cambiar su estado) y con la ubicación de las Viviendas.
+Técnico de Mantenimiento:
+Qué hace: Consulta a qué pisos tiene que ir, marca cuándo empieza y acaba de limpiar, reporta qué productos ha gastado y avisa si encuentra algo roto.
+Con qué interactúa: Interactúa con sus Tareas asignadas, el inventario de Suministros y crea nuevas Incidencias.
+Bloque 4
+ – 
+Alertas del Sistema
+Para evitar las llamadas constantes por teléfono y los mensajes de WhatsApp que se pierden, el sistema genera avisos automáticos:
+Alerta por Incidencia (Avería):
+ Salta cuando limpieza reporta un desperfecto grave. Avisa al Coordinador (para decidir qué hacer) y al Técnico (como aviso de tarea urgente).
+Alerta por Retraso Crítico:
+ Si faltan solo 45 minutos para un check-in y el piso sigue "En proceso", el sistema avisa al Coordinador para que presione y a Recepción para que prepare al cliente.
+Alerta de Falta de Recursos:
+ Cuando un operario marca que el stock de amenities ha bajado del mínimo en el almacén de ese edificio.
+Alerta de Vivienda Lista:
+ En cuanto el Coordinador valida el piso, Recepción recibe un aviso instantáneo para entregar llaves sin preguntar por teléfono.
+Bloque 
+5
+ – Módulos del sistema
+Módulo 1: 
+Panel de Control (Dashboard)
+Qué gestiona: Es la pantalla principal de monitorización. Muestra un resumen visual en tiempo real del estado de todas las viviendas hoy (cuántas faltan por limpiar, cuántas incidencias urgentes hay y próximos check-ins).
+Principal usuario: Coordinador Operativo y Recepción.
+Módulo 2: 
+Gestión de Tareas (Limpieza y Operativa)
+Qué gestiona: Todo lo relacionado con las órdenes de trabajo diarias. Permite asignar limpiezas, ver qué piso toca limpiar a continuación, marcar el inicio y el fin del trabajo, y enviar el reporte de que la vivienda está lista.
+Principal usuario: Equipo de Limpieza (para ejecutar) y Coordinador (para supervisar).
+Módulo 3: Gestión de Incidencias y Mantenimiento
+Qué gestiona: El reporte de averías y desperfectos. Aquí se suben las fotos de lo que está roto, se asigna la urgencia, se avisa al técnico y se hace el seguimiento hasta que se repara.
+Principal usuario: Los clientes de las viviendas y el personal de limpieza.
+Módulo 4: Gestión de Viviendas y Turnos
+Qué gestiona: La base de datos de los 25 pisos (direcciones, códigos de acceso) y la sincronización de las franjas horarias (check-in / check-out) para saber a qué hora exacta tiene que estar listo cada apartamento.
+Principal usuario: Recepción y Coordinador Operativo.
+Módulo 5: Gestión de Inventario (Suministros)
+Qué gestiona: El control del stock de sábanas, toallas y amenities (gel, champú). Recoge lo que gasta el equipo de limpieza y genera las alertas cuando hay que comprar más material.
+Principal usuario: Equipo de Limpieza (para reportar gasto) y Coordinador (para reponer).
+Bloque 
+6
+ –
+ Arquitectura Conceptual
+El sistema 
+se organiza en 5 módulos interconectados que alimentan un Panel de Control (Dashboard) central.
+La lógica es circular: la información de las Viviendas genera Tareas; las tareas pueden detectar Incidencias (que bloquean la vivienda) o consumir Inventario (que genera pedidos de reposición). Todo esto fluye en tiempo real hacia el panel del Coordinador
+, eliminando la necesidad de archivos Excel manuales y llamadas de seguimiento constantes.
