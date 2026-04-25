@@ -1,29 +1,29 @@
-// ==== MOCK DATA EXTENDIDO ====
+// ==== MOCK DATA EXTENDIDO E INTEGRAL ====
 const data = {
     viviendas: [
-        { id: 'V01', nombre: 'Apartamento Sol', estado: 'lista', checkin: '15:00', checkout: '11:00', prioridad: 'baja', img: 'images/apartamento_sol_1776014972657.png' },
-        { id: 'V02', nombre: 'Loft Centro', estado: 'limpieza', checkin: '16:30', checkout: '11:00', prioridad: 'media', img: 'images/loft_centro_1776014985148.png' },
-        { id: 'V03', nombre: 'Ático Vistas', estado: 'incidencia', checkin: '14:00', checkout: '10:00', prioridad: 'alta', img: 'images/atico_vistas_1776015004008.png' },
-        { id: 'V04', nombre: 'Estudio Playa', estado: 'pendiente', checkin: '17:00', checkout: '12:00', prioridad: 'baja', img: 'images/estudio_playa_1776015021367.png' },
-        { id: 'V05', nombre: 'Casa Jardín', estado: 'ocupada', checkin: '-', checkout: '-', prioridad: '-', img: 'images/casa_jardin_1776015036940.png' },
-        { id: 'V06', nombre: 'Chalet Montaña', estado: 'lista', checkin: '18:00', checkout: '10:00', prioridad: 'baja', img: 'images/chalet_montana_1776015662118.png' },
-        { id: 'V07', nombre: 'Villa Piscina', estado: 'limpieza', checkin: '15:30', checkout: '11:00', prioridad: 'alta', img: 'images/villa_piscina_1776015679284.png' },
-        { id: 'V08', nombre: 'Apartamento Zen', estado: 'lista', checkin: '16:00', checkout: '09:00', prioridad: 'media', img: 'images/apartamento_zen_1776015694326.png' },
-        { id: 'V09', nombre: 'Piso Estudiantes', estado: 'pendiente', checkin: '14:30', checkout: '11:30', prioridad: 'alta', img: 'images/piso_estudiantes_1776015713333.png' },
-        { id: 'V10', nombre: 'Ático Lujo', estado: 'ocupada', checkin: '-', checkout: '-', prioridad: '-', img: 'images/atico_lujo_1776015731102.png' }
+        { id: 'V01', nombre: 'Apartamento Sol', estado: 'lista', checkin: '24 Abr - 15:00', checkout: '22 Abr - 11:00', prioridad: 'baja', img: 'images/apartamento_sol_1776014972657.png' },
+        { id: 'V02', nombre: 'Loft Centro', estado: 'limpieza', checkin: '22 Abr - 16:30', checkout: '22 Abr - 11:00', prioridad: 'media', img: 'images/loft_centro_1776014985148.png' },
+        { id: 'V03', nombre: 'Ático Vistas', estado: 'incidencia', checkin: '25 Abr - 14:00', checkout: '23 Abr - 10:00', prioridad: 'alta', img: 'images/atico_vistas_1776015004008.png' },
+        { id: 'V04', nombre: 'Estudio Playa', estado: 'pendiente', checkin: '22 Abr - 17:00', checkout: '22 Abr - 12:00', prioridad: 'baja', img: 'images/estudio_playa_1776015021367.png' },
+        { id: 'V05', nombre: 'Casa Jardín', estado: 'auditoria', checkin: '26 Abr - 13:00', checkout: '22 Abr - 11:00', prioridad: 'alta', img: 'images/casa_jardin_1776015036940.png' },
+        { id: 'V06', nombre: 'Chalet Montaña', estado: 'lista', checkin: '28 Abr - 18:00', checkout: '20 Abr - 10:00', prioridad: 'baja', img: 'images/chalet_montana_1776015662118.png' },
+        { id: 'V07', nombre: 'Villa Piscina', estado: 'limpieza', checkin: '23 Abr - 15:30', checkout: '21 Abr - 11:00', prioridad: 'alta', img: 'images/villa_piscina_1776015679284.png' },
+        { id: 'V08', nombre: 'Apartamento Zen', estado: 'lista', checkin: '27 Abr - 16:00', checkout: '20 Abr - 09:00', prioridad: 'media', img: 'images/apartamento_zen_1776015694326.png' },
+        { id: 'V09', nombre: 'Piso Estudiantes', estado: 'pendiente', checkin: '22 Abr - 14:30', checkout: '22 Abr - 11:30', prioridad: 'alta', img: 'images/piso_estudiantes_1776015713333.png' },
+        { id: 'V10', nombre: 'Ático Lujo', estado: 'ocupada', checkin: '05 May - 15:00', checkout: '01 May - 11:00', prioridad: '-', img: 'images/atico_lujo_1776015731102.png' }
     ],
     alertas: [
         { id: 101, tipo: 'critica', mensaje: 'Fuga de agua grave en Ático Vistas', time: 'Hace 5 min' },
-        { id: 102, tipo: 'retraso', mensaje: 'Retraso Check-in: Estudio Playa', time: 'Hace 15 min' },
-        { id: 103, tipo: 'stock', mensaje: 'Falta de stock: Toallas bajo mínimo', time: 'Hace 1 hora' },
-        { id: 104, tipo: 'lista', mensaje: 'Vivienda Lista: Apartamento Sol', time: 'Hace 2 horas' }
+        { id: 102, tipo: 'retraso', mensaje: 'Retraso Check-in: Estudio Playa', time: 'Hace 15 min' }
     ],
+    // Ciclo de tarea: auditoria -> pendiente -> encurso -> completada
     tareasLimpieza: [
-        { id: 'L102', titulo: 'Limpieza Estudio Playa', estado: 'pendiente', limite: '16:00', pri: 'alta', asignado: 'Pendiente' },
-        { id: 'L103', titulo: 'Limpieza Loft Centro', estado: 'encurso', limite: '15:30', pri: 'media', asignado: 'Jorge C.' },
-        { id: 'L104', titulo: 'Limpieza Apartamento Sol', estado: 'completada', limite: '14:00', pri: 'baja', asignado: 'Luisa P.' },
-        { id: 'L105', titulo: 'Limpieza Villa Piscina', estado: 'encurso', limite: '15:30', pri: 'alta', asignado: 'María G.' },
-        { id: 'L106', titulo: 'Limpieza Piso Estudiantes', estado: 'pendiente', limite: '14:30', pri: 'alta', asignado: 'Pendiente' }
+        { id: 'L101', titulo: 'Auditoría Checkout Casa Jardín', estado: 'auditoria', limite: '22 Abr - 12:00', pri: 'alta', asignado: 'Pendiente' },
+        { id: 'L102', titulo: 'Limpieza Estudio Playa', estado: 'pendiente', limite: '22 Abr - 16:00', pri: 'alta', asignado: 'Pendiente' },
+        { id: 'L103', titulo: 'Limpieza Loft Centro', estado: 'encurso', limite: '22 Abr - 15:30', pri: 'media', asignado: 'Jorge C.' },
+        { id: 'L104', titulo: 'Limpieza Apartamento Sol', estado: 'completada', limite: '22 Abr - 14:00', pri: 'baja', asignado: 'Luisa P.' },
+        { id: 'L105', titulo: 'Limpieza Villa Piscina', estado: 'encurso', limite: '23 Abr - 15:30', pri: 'alta', asignado: 'María G.' },
+        { id: 'L106', titulo: 'Limpieza Piso Estudiantes', estado: 'pendiente', limite: '22 Abr - 14:30', pri: 'alta', asignado: 'Pendiente' }
     ],
     incidencias: [
         { id: 'INC-001', vivienda: 'Ático Vistas', problema: 'Tubería rota lavabo', estado: 'Asignada', tecnico: 'Carlos T.', gravedad: 'Alta' },
@@ -34,15 +34,32 @@ const data = {
         { id: 'MT-01', incidencia: 'INC-001', tecnico: 'Carlos T.', tiempo: '2 horas', estado: 'En curso' },
         { id: 'MT-02', incidencia: 'INC-003', tecnico: 'Pendiente', tiempo: '30 min', estado: 'Pendiente asignación' }
     ],
+    mantenimientoPreventivo: [
+        { viv: 'Chalet Montaña', ultRev: '10 Feb 2026', proxRev: '10 Abr 2026', elementos: 'Caldera, Tejado', estado: 'Retrasada' },
+        { viv: 'Villa Piscina', ultRev: '14 Mar 2026', proxRev: '14 May 2026', elementos: 'Limpiadora Piscina, Cloro', estado: 'Al día' },
+        { viv: 'Apartamento Zen', ultRev: '05 Abr 2026', proxRev: '05 Jun 2026', elementos: 'Sifones, Detectores Humo', estado: 'Al día' }
+    ],
+    inventarioCentral: { toallas: 12, sabanas: 45, amenities: 80, quimicos: 5 },
+    proveedores: [
+        { nombre: 'Lavandería IndusSur', recogen: 'Diario 08:00', estado: 'Servicio Activo', contacto: 'Logística B2B' },
+        { nombre: 'Suministros Hostelería JJ', recogen: 'Martes', estado: 'Pedido Pendiente', contacto: 'Gestor JJ' }
+    ],
+    camiones: [
+        { ruta: 'Ruta 1 (Costa)', matricula: '4452-LKJ', driver: 'Paco S.', estado: 'En Reparto (Parada: V04)' },
+        { ruta: 'Ruta 2 (Centro)', matricula: '9981-BBC', driver: 'Luis M.', estado: 'En Base HUB (Cargando)' }
+    ],
+    inventarioCasas: [
+        { casa: 'V04 Estudio Playa', deficit: 'Faltan 2 Toallas Ducha', grav: 'Alta', accion: 'Añadido a Ruta 1' },
+        { casa: 'V03 Ático Vistas', deficit: 'Sin gel cortesía', grav: 'Baja', accion: 'Aviso Limpieza' }
+    ],
     usuarios: [
+        { nombre: 'Paula Auditora', rol: 'Auditor', config: 'Validación Check-out', status: 'Activo' },
         { nombre: 'Laura Medina', rol: 'Coordinador', config: 'Acceso Total', status: 'Activo' },
-        { nombre: 'David Román', rol: 'Recepción', config: 'Viviendas, Dashboard', status: 'Activo' },
-        { nombre: 'María G.', rol: 'Limpieza', config: 'Limpieza, Inventario', status: 'Activo' },
+        { nombre: 'María G.', rol: 'Limpieza', config: 'Limpieza', status: 'Activo' },
         { nombre: 'Jorge C.', rol: 'Limpieza', config: 'Limpieza', status: 'Activo' },
         { nombre: 'Luisa P.', rol: 'Limpieza', config: 'Limpieza', status: 'Activo' },
         { nombre: 'Carlos T.', rol: 'Mantenimiento', config: 'Incidencias, Mant.', status: 'En Servicio' },
-        { nombre: 'Roberto S.', rol: 'Mantenimiento', config: 'Incidencias, Mant.', status: 'En Servicio' },
-        { nombre: 'Javier M.', rol: 'Mantenimiento', config: 'Incidencias, Mant.', status: 'Activo' }
+        { nombre: 'Roberto S.', rol: 'Mantenimiento', config: 'Incidencias, Mant.', status: 'En Servicio' }
     ]
 };
 
@@ -66,7 +83,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// ==== MODAL SYSTEM (Imágenes y Formularios) ====
+// ==== MODAL SYSTEM ====
 window.openModal = function(imgSrc, title) {
     document.getElementById('modal-img').src = imgSrc;
     document.getElementById('modal-title').innerText = title;
@@ -112,7 +129,7 @@ window.saveIncidencia = function() {
     const v = data.viviendas.find(x => x.nombre === viv);
     if(v) v.estado = 'incidencia';
 
-    data.alertas.unshift({ id: Date.now(), tipo: 'critica', mensaje: `Nueva Incidencia: ${prob}`, time: 'Ahora mismo' });
+    data.alertas.unshift({ id: Date.now(), tipo: 'critica', mensaje: `Nueva Incidencia en ${viv}: ${prob}`, time: 'Ahora' });
     
     document.getElementById('inc-problema').value = '';
     closeFormModal();
@@ -134,24 +151,20 @@ window.saveTecnicoAsignado = function() {
 }
 
 window.savePedidoStock = function() {
-    const toallasVal = document.getElementById('stock-toallas');
-    if(toallasVal) toallasVal.innerHTML = '52<span> u.</span>';
-    const tag = toallasVal.nextElementSibling;
-    tag.className = 'tag bg-success mt-2';
-    tag.innerText = 'Disponible';
+    data.inventarioCentral.toallas += 40;
+    data.inventarioCentral.sabanas += 30;
+    data.proveedores[1].estado = 'Repartiendo hacia HUB'; // JJ Supplies
+    data.alertas.unshift({ id: Date.now(), tipo: 'stock', mensaje: 'Orden Emitida a Suministros Hostelería JJ', time: 'Ahora mismo' });
     
-    data.alertas.unshift({ id: Date.now(), tipo: 'stock', mensaje: 'Stock reestablecido (Toallas)', time: 'Ahora mismo' });
-    if(data.alertas.length > 5) data.alertas.pop();
-
     closeFormModal();
-    renderDashboard();
+    renderTodo();
 }
 
 window.saveNuevoUsuario = function() {
     const n = document.getElementById('usr-nombre').value;
     const r = document.getElementById('usr-rol').value;
     if(!n) return alert('Escribe el nombre');
-    data.usuarios.push({ nombre: n, rol: r, config: 'Asignado Manual', status: 'Activo' });
+    data.usuarios.push({ nombre: n, rol: r, config: 'Dedicación Exclusiva', status: 'Activo' });
     document.getElementById('usr-nombre').value = '';
     closeFormModal();
     renderTodo();
@@ -165,16 +178,24 @@ window.resolverInc = function(id) {
         if(mant) mant.estado = 'Resuelto';
         
         const viv = data.viviendas.find(v => v.nombre === inc.vivienda);
-        if(viv) viv.estado = 'limpieza'; // De avería pasa a limpiar
+        if(viv) {
+            viv.estado = 'limpieza';
+            // Devolver a flujo de Kanban de limpieza
+            data.tareasLimpieza.push({
+                id: 'L-' + Date.now().toString().slice(-6) + Math.floor(Math.random() * 1000),
+                titulo: 'Limpieza post-Mantenimiento ' + viv.nombre,
+                estado: 'pendiente', limite: 'Urgent', pri: 'alta', asignado: 'Pendiente'
+            });
+        }
         renderTodo();
     }
 }
 
-// ==== BUSCADOR ====
+// ==== BUSCADOR GLOBAL ====
 document.querySelector('.search-bar input').addEventListener('input', (e) => {
     const val = e.target.value.toLowerCase();
-    // Filtro básico en Viviendas
-    document.querySelectorAll('#viviendas-list tr').forEach(tr => {
+    document.querySelectorAll('.data-table tr').forEach(tr => {
+        if(tr.parentNode.tagName === 'THEAD') return;
         tr.style.display = tr.innerText.toLowerCase().includes(val) ? '' : 'none';
     });
 });
@@ -193,7 +214,7 @@ function setupNavigation() {
     });
 }
 
-// ==== RENDERS ====
+// ==== RENDERS CORE ====
 function getBadge(txt, bgClass) { return `<span class="tag ${bgClass}">${txt}</span>`; }
 function getPriClass(pri) { return pri === 'alta' ? 'pri-alta' : pri === 'media' ? 'pri-media' : 'pri-baja'; }
 
@@ -227,17 +248,18 @@ function renderDashboard() {
 
     const checkinBox = document.getElementById('checkin-list');
     checkinBox.innerHTML = '';
-    const pend = data.viviendas.filter(v => ['pendiente', 'limpieza', 'incidencia'].includes(v.estado)).sort((a,b) => a.checkin.localeCompare(b.checkin));
+    const pend = data.viviendas.filter(v => ['pendiente', 'limpieza', 'incidencia', 'auditoria'].includes(v.estado));
     
     pend.forEach((v, idx) => {
-        let tagClass = v.estado === 'incidencia' ? 'bg-danger' : v.estado === 'limpieza' ? 'bg-warning' : 'bg-primary';
+        let tagClass = v.estado === 'incidencia' ? 'bg-danger' : v.estado === 'limpieza' ? 'bg-warning' : v.estado === 'auditoria' ? 'bg-info' : 'bg-primary';
+        // Parse "24 Abr - 15:00" to "15:00" for visual tightness in dashboard
+        let hour = v.checkin.includes('-') ? v.checkin.split('-')[1].trim() : v.checkin;
         checkinBox.innerHTML += `
             <div class="list-item" style="animation: fadeIn 0.4s ease forwards ${idx*0.1}s; opacity: 0; transform: translateY(5px);">
                 <div class="item-info">
-                    <div style="font-size: 15px; font-weight: 700; width: 50px;">${v.checkin}</div>
+                    <div style="font-size: 15px; font-weight: 700; width: 50px;">${hour}</div>
                     <div>
-                        <div style="font-weight:600; font-size:14px">${v.nombre}</div>
-                        <div style="font-size:11px; color:var(--text-muted);">PRIORIDAD: <span class="${getPriClass(v.prioridad)}">${v.prioridad.toUpperCase()}</span></div>
+                        <div style="font-weight:600; font-size:14px">${v.nombre} <small style="display:block;color:grey;font-size:10px;">${v.checkin.split('-')[0]}</small></div>
                     </div>
                 </div>
                 ${getBadge(v.estado.toUpperCase(), tagClass)}
@@ -254,7 +276,18 @@ function renderViviendas() {
     const list = document.getElementById('viviendas-list');
     list.innerHTML = '';
     data.viviendas.forEach(v => {
-        let sc = v.estado === 'ocupada' ? 'bg-warning' : v.estado === 'lista' ? 'bg-success' : v.estado === 'incidencia' ? 'bg-danger' : 'bg-primary';
+        let sc = v.estado === 'ocupada' ? 'bg-warning' : v.estado === 'lista' ? 'bg-success' : v.estado === 'incidencia' ? 'bg-danger' : v.estado === 'auditoria' ? 'bg-info' : 'bg-primary';
+        
+        // Lógica de botones de Huésped
+        let btnHuesped = '';
+        if (v.estado === 'lista') {
+            btnHuesped = `<button class="btn-primary" style="padding:4px 8px; font-size:11px;" onclick="toggleOcupacion('${v.id}', 'ocupada')">Registrar Entrada (Check-In)</button>`;
+        } else if (v.estado === 'ocupada') {
+            btnHuesped = `<button class="btn-secondary" style="padding:4px 8px; font-size:11px; background:var(--warning-bg);" onclick="toggleOcupacion('${v.id}', 'auditoria')">Finalizar Estancia (Check-Out)</button>`;
+        } else {
+            btnHuesped = `<span style="font-size:11px; color:var(--text-muted);">En mantenimiento/limpieza</span>`;
+        }
+
         list.innerHTML += `
             <tr>
                 <td>
@@ -268,35 +301,65 @@ function renderViviendas() {
                 <td><i class="ph ph-sign-out"></i> ${v.checkout}</td>
                 <td><i class="ph ph-sign-in"></i> ${v.checkin}</td>
                 <td class="${getPriClass(v.prioridad)}">${v.prioridad.toUpperCase()}</td>
-                <td>${getBadge(v.estado, sc)}</td>
+                <td>${getBadge(v.estado.toUpperCase(), sc)}</td>
+                <td>${btnHuesped}</td>
             </tr>
         `;
     });
 }
 
+window.toggleOcupacion = function(id, newState) {
+    const viv = data.viviendas.find(v => v.id === id);
+    if(viv) {
+        viv.estado = newState;
+        data.alertas.unshift({ id: Date.now(), tipo: 'info', mensaje: `Huésped: ${viv.nombre} ahora está ${newState.toUpperCase()}`, time: 'Ahora mismo' });
+        
+        // Si sale el huésped, creamos la tarjeta de Auditoría automáticamente
+        if(newState === 'auditoria') {
+            data.tareasLimpieza.push({
+                id: 'L-' + Date.now().toString().slice(-6) + Math.floor(Math.random() * 1000),
+                titulo: 'Auditoría Checkout ' + viv.nombre,
+                estado: 'auditoria', limite: viv.checkout, pri: viv.prioridad, asignado: 'Pendiente'
+            });
+        }
+        
+        renderTodo();
+    }
+}
+
 function renderLimpieza() {
+    const audBox = document.getElementById('kb-auditoria');
     const pendBox = document.getElementById('kb-pendientes');
     const onBox = document.getElementById('kb-encurso');
     const doneBox = document.getElementById('kb-completadas');
     
-    pendBox.innerHTML = ''; onBox.innerHTML = ''; doneBox.innerHTML = '';
-    let cPend = 0, cOn = 0, cDone = 0;
+    audBox.innerHTML = ''; pendBox.innerHTML = ''; onBox.innerHTML = ''; doneBox.innerHTML = '';
+    let cAud = 0, cPend = 0, cOn = 0, cDone = 0;
 
     const limpiadores = data.usuarios.filter(u => u.rol === 'Limpieza').map(u => u.nombre);
+    const auditores = data.usuarios.filter(u => u.rol === 'Auditor').map(u => u.nombre);
 
     data.tareasLimpieza.forEach(t => {
         let btnHTML = '';
         let bClass = t.pri === 'alta' ? 'kc-urgent' : 'kc-pending';
         let iconHtml = '<i class="ph ph-clock"></i>';
         
-        let optionsHtml = `<option value="Pendiente" ${t.asignado === 'Pendiente' ? 'selected' : ''}>-- Asignar Empleado --</option>`;
-        limpiadores.forEach(lim => {
-            optionsHtml += `<option value="${lim}" ${t.asignado === lim ? 'selected' : ''}>${lim}</option>`;
+        // Select logic depending on state
+        let optionsHtml = `<option value="Pendiente" ${t.asignado === 'Pendiente' ? 'selected' : ''}>-- Asignar --</option>`;
+        let perList = (t.estado === 'auditoria') ? auditores : limpiadores; // Si es auditoria, filtro por auditores
+        perList.forEach(p => {
+            optionsHtml += `<option value="${p}" ${t.asignado === p ? 'selected' : ''}>${p}</option>`;
         });
         const assignerHtml = `<select style="width:100%; margin-top:8px; padding:6px; border-radius:4px; border:1px solid var(--border-color); font-size:12px;" onchange="assignEmpleado('${t.id}', this.value)">${optionsHtml}</select>`;
 
-        if(t.estado === 'pendiente') {
-            btnHTML = `<button onclick="cambiarLimpieza('${t.id}', 'encurso')"><i class="ph ph-play"></i> Iniciar Tarea</button>`;
+        if(t.estado === 'auditoria') {
+            btnHTML = `
+                <button style="background:var(--primary-color);" onclick="cambiarLimpieza('${t.id}', 'pendiente')"><i class="ph ph-check-square"></i> Validar Auditoría</button>
+            `;
+            cAud++;
+        }
+        else if(t.estado === 'pendiente') {
+            btnHTML = `<button style="background:var(--info-color);" onclick="cambiarLimpieza('${t.id}', 'encurso')"><i class="ph ph-play"></i> Iniciar Limpieza</button>`;
             cPend++;
         } else if (t.estado === 'encurso') {
             bClass = 'kc-pending';
@@ -310,7 +373,7 @@ function renderLimpieza() {
             bClass = 'kc-ready';
             iconHtml = '<i class="ph ph-check-circle" style="color:var(--success-color)"></i>';
             btnHTML = `
-                <button style="background:#E2E8F0; color:var(--text-muted); width: 60%;" disabled>Validada</button>
+                <button style="background:#E2E8F0; color:var(--text-muted); width: 60%;" disabled>Verificada</button>
                 <button style="background:var(--warning-color); width: 40%;" onclick="cambiarLimpieza('${t.id}', 'encurso')" title="Revertir estado a en curso"><i class="ph ph-arrow-counter-clockwise"></i></button>
             `;
             cDone++;
@@ -320,16 +383,19 @@ function renderLimpieza() {
             <div class="kanban-card ${bClass}">
                 <h4>${t.titulo}</h4>
                 <div style="margin-bottom:12px; font-size:13px;">
-                    👤 Asignado: ${assignerHtml}
+                    👤 Accionante: ${assignerHtml}
                 </div>
-                <p>${iconHtml} <span style="margin-left:4px;">Límite: <strong>${t.limite}</strong> (<span class="${getPriClass(t.pri)}">${t.pri}</span>)</span></p>
-                <div class="k-actions">${btnHTML}</div>
+                <p>${iconHtml} <span style="margin-left:4px;">Lím. ${t.limite} (<span class="${getPriClass(t.pri)}">${t.pri}</span>)</span></p>
+                <div class="k-actions" style="margin-top:10px;">${btnHTML}</div>
             </div>`;
 
+        if(t.estado === 'auditoria') audBox.insertAdjacentHTML('beforeend', card);
         if(t.estado === 'pendiente') pendBox.insertAdjacentHTML('beforeend', card);
         if(t.estado === 'encurso') onBox.insertAdjacentHTML('beforeend', card);
         if(t.estado === 'completada') doneBox.insertAdjacentHTML('beforeend', card);
     });
+    
+    document.getElementById('count-auditoria').innerText = cAud;
     document.getElementById('count-pendientes').innerText = cPend;
     document.getElementById('count-encurso').innerText = cOn;
     document.getElementById('count-completadas').innerText = cDone;
@@ -347,15 +413,27 @@ window.cambiarLimpieza = function(id, newState) {
         const oldState = t.estado;
         t.estado = newState;
         
+        const vivTitle = t.titulo.replace('Limpieza ', '').replace('Auditoría Checkout ', '');
+        const viv = data.viviendas.find(v => vivTitle.includes(v.nombre));
+
+        // Transicion de auditoria -> limpieza (Pendiente)
+        if(oldState === 'auditoria' && newState === 'pendiente') {
+            t.titulo = t.titulo.replace('Auditoría Checkout', 'Limpieza');
+            // reset employee as auditor -> limpieza transition happens
+            t.asignado = 'Pendiente';
+            data.alertas.unshift({ id: Date.now(), tipo: 'info', mensaje: `Auditoría OK: ${vivTitle} lista para limpiar`, time: 'Ahora' });
+            if(viv) viv.estado = 'pendiente';
+        }
+
+        // Transicion a completada -> vivienda lista
         if(newState === 'completada') {
-            data.alertas.unshift({ id: Date.now(), tipo: 'lista', mensaje: `Limpieza terminada: ${t.titulo.replace('Limpieza ', '')}`, time: 'Hace un instante' });
+            data.alertas.unshift({ id: Date.now(), tipo: 'lista', mensaje: `Limpieza terminada: ${vivTitle}`, time: 'Hace un instante' });
             if(data.alertas.length > 6) data.alertas.pop();
-            const viv = data.viviendas.find(v => t.titulo.includes(v.nombre));
             if(viv) viv.estado = 'lista';
         }
         
+        // Si se revierte una limpiada
         if(oldState === 'completada' && newState !== 'completada') {
-            const viv = data.viviendas.find(v => t.titulo.includes(v.nombre));
             if(viv) viv.estado = newState === 'encurso' ? 'limpieza' : 'pendiente';
         }
 
@@ -376,7 +454,7 @@ function renderIncidencias() {
                 <td>${getBadge(i.estado, tag)}</td>
                 <td>${i.tecnico}</td>
                 <td>
-                    ${i.estado !== 'Resuelta' ? `<button class="btn-primary" style="padding: 4px 8px; font-size: 11px;" onclick="resolverInc('${i.id}')">Resolver</button>` : `<button class="btn-secondary" style="padding: 4px 8px; font-size: 11px;" disabled>Completada</button>`}
+                    ${i.estado !== 'Resuelta' ? `<button class="btn-primary" style="padding: 4px 8px; font-size: 11px;" onclick="resolverInc('${i.id}')">Resolver y Cerrar</button>` : `<button class="btn-secondary" style="padding: 4px 8px; font-size: 11px;" disabled>Completada</button>`}
                 </td>
             </tr>
         `;
@@ -384,6 +462,7 @@ function renderIncidencias() {
 }
 
 function renderMantenimiento() {
+    // 1. Correctivo
     const list = document.getElementById('mantenimiento-list');
     list.innerHTML = '';
     data.mantenimiento.forEach(m => {
@@ -396,10 +475,73 @@ function renderMantenimiento() {
                 <td>${m.tiempo}</td>
                 <td>${getBadge(m.estado, tag)}</td>
                 <td>
-                    ${m.estado.includes('Pendiente') ? `<button class="btn-primary" style="padding: 4px 10px;font-size:11px;" onclick="openFormModal('modal-tecnico', '${m.id}')">Asignar Téc.</button>` : `<button class="btn-secondary" disabled style="padding: 4px 10px;font-size:11px;opacity:0.5;">Ya asignada</button>`}
+                    ${m.estado.includes('Pendiente') ? `<button class="btn-primary" style="padding: 4px 10px;font-size:11px;" onclick="openFormModal('modal-tecnico', '${m.id}')">Asignar Cuadrilla</button>` : `<button class="btn-secondary" disabled style="padding: 4px 10px;font-size:11px;opacity:0.5;">Intervención Programada</button>`}
                 </td>
             </tr>
         `;
+    });
+
+    // 2. Preventivo Bimestral
+    const prevList = document.getElementById('mant-preventivo-list');
+    prevList.innerHTML = '';
+    data.mantenimientoPreventivo.forEach(p => {
+        let sc = p.estado === 'Al día' ? 'bg-success' : 'bg-danger';
+        prevList.innerHTML += `
+            <tr>
+                <td><strong>${p.viv}</strong></td>
+                <td><i class="ph ph-calendar"></i> ${p.ultRev}</td>
+                <td><i class="ph ph-calendar-blank"></i> <strong>${p.proxRev}</strong> <br><small class="text-muted">(Bimestral)</small></td>
+                <td>${p.elementos}</td>
+                <td>${getBadge(p.estado, sc)}</td>
+                <td>
+                    <button class="btn-secondary" style="padding:4px 8px; font-size:11px;" onclick="alert('Ejecutando Revisión...')">Certificar</button>
+                </td>
+            </tr>
+        `;
+    });
+}
+
+function renderInventarioMacro() {
+    // 1. Almacen Central
+    const alGrid = document.getElementById('almacen-hub-grid');
+    alGrid.innerHTML = `
+        <div class="kpi-card stock-card"><div class="kpi-title">Sets de Sábanas</div>
+            <div class="kpi-value" id="stock-sabanas">${data.inventarioCentral.sabanas}<span> pkts</span></div>
+            ${getBadge('Stock Estable', 'bg-success')}
+        </div>
+        <div class="kpi-card stock-card"><div class="kpi-title">Toallas Balneario</div>
+            <div class="kpi-value" id="stock-toallas">${data.inventarioCentral.toallas}<span> uds</span></div>
+            ${data.inventarioCentral.toallas < 20 ? getBadge('Bajo Mínimo (Quiebre)', 'bg-danger') : getBadge('Stock Estable', 'bg-success')}
+        </div>
+        <div class="kpi-card stock-card"><div class="kpi-title">Químicos Limpieza</div>
+            <div class="kpi-value">${data.inventarioCentral.quimicos}<span> barriles</span></div>
+            ${getBadge('Requiere Revisión', 'bg-warning')}
+        </div>
+        <div class="kpi-card stock-card"><div class="kpi-title">Amenities Welcome</div>
+            <div class="kpi-value">${data.inventarioCentral.amenities}<span> sets</span></div>
+            ${getBadge('Stock Estable', 'bg-success')}
+        </div>
+    `;
+
+    // 2. Logística Proveedores y Camiones
+    const provList = document.getElementById('proveedores-list');
+    provList.innerHTML = '';
+    data.proveedores.forEach(p => {
+        provList.innerHTML += `<tr><td><strong>${p.nombre}</strong><br><small>${p.contacto}</small></td><td>Freq: ${p.recogen}</td><td>${getBadge(p.estado, p.estado.includes('Servicio')?'bg-success':'bg-warning')}</td></tr>`;
+    });
+    
+    const camList = document.getElementById('camiones-list');
+    camList.innerHTML = '';
+    data.camiones.forEach(c => {
+        camList.innerHTML += `<tr><td><strong>${c.ruta}</strong><br><small>${c.matricula} (${c.driver})</small></td><td>${getBadge(c.estado, c.estado.includes('Reparto')?'bg-primary':'bg-warning')}</td></tr>`;
+    });
+
+    // 3. Faltas en Vivienda
+    const casList = document.getElementById('inventario-casas-list');
+    casList.innerHTML = '';
+    data.inventarioCasas.forEach(c => {
+        let gTag = c.grav === 'Alta' ? 'bg-danger' : 'bg-warning';
+        casList.innerHTML += `<tr><td><strong>${c.casa}</strong></td><td>${c.deficit}</td><td>${getBadge(c.grav, gTag)}</td><td>${c.accion}</td></tr>`;
     });
 }
 
@@ -425,6 +567,7 @@ function renderTodo() {
     renderLimpieza();
     renderIncidencias();
     renderMantenimiento();
+    renderInventarioMacro();
     renderUsuarios();
 }
 
@@ -432,8 +575,3 @@ function initApp() {
     setupNavigation();
     renderTodo();
 }
-
-// Keyframes dynamico
-const style = document.createElement('style');
-style.innerHTML = `@keyframes spin { 100% { transform: rotate(360deg); } }`;
-document.head.appendChild(style);
